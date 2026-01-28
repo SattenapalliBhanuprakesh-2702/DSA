@@ -20,6 +20,22 @@
 
 # Space Complexity: O(N) as we are using a map data structure.
 
+# 1. nums=[1,-1,5,-2,3], target=3 → 4
+# 2. nums=[-2,-1,2,1], target=1 → 2
+# 3. nums=[1,2,3,4,5], target=11 → 3 ([3,4,5])
+# 4. nums=[1,2,3,4,5], target=15 → 5 (whole array)
+# 5. nums=[1,2,3,4,5], target=0 → 0 (no subarray)
+# 6. nums=[3,1,2], target=3 → 1 ([3])
+# 7. nums=[-1,-2,-3,-4], target=-6 → 3 ([-1,-2,-3])
+# 8. nums=[0,0,0,0], target=0 → 4 (whole array)
+# 9. nums=[5,1,2,3], target=5 → 2 ([5] or [2,3] depending on array sum positions)
+# 10. nums=[1], target=1 → 1 (single element)
+# 11. nums=[-1], target=1 → 0 (no subarray)
+# 12. nums=[2, -2, 2, -2, 2], target=0 → 4 ([2,-2,2,-2])
+# 13. nums=[1,2,-1,2,-1,2], target=3 → 5 ([2,-1,2,-1,2])
+# 14. nums=[1000000,-1000000,1], target=1 → 2 ([-1000000, 1])
+
+
 def longest_subarray(nums, target):
     seen = {0:-1}
     total = 0
